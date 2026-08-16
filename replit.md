@@ -1,45 +1,44 @@
-# [Project name]
+# CarbonGate
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+## Overview
+CarbonGate is a Streamlit decision-support tool for CBAM (EU Carbon Border
+Adjustment Mechanism) exposure. Users upload an EU import shipment CSV; the app
+computes carbon liability per shipment, projects it across the 2026–2034
+phase-in, scores supplier data quality, runs a verify-or-abate scenario per
+plant, and offers a Groq-backed AI analyst grounded in the computed figures.
 
-## Run & Operate
+## Architecture
+- `app.py` — page config (wide), sidebar (EUA price slider 40–150 default 78,
+  year selector 2026–2034), tab wiring. The liability pipeline is computed
+  **after** the upload tab renders so an upload unlocks the other tabs in the
+  same script pass (st.tabs renders all panels in one pass).
+- `utils/data_processing.py` — cached reference-table loading, strict upload
+  validation (errors name column + row count; file rejected on any error),
+  euro formatting (thousands separators, no decimals).
+- `utils/cbam_math.py` — calculation chain: covered rows only → join reference
+  on cn_code → applicable intensity (reported iff Verified+present, else EU
+  default; `intensity_basis` records which) → chargeable = max(applicable −
+  benchmark, 0) → gross = chargeable × tonnes × EUA → deduct origin carbon
+  price pro-rata to chargeable share, floor at 0 → year liability = net ×
+  phase-in factor. Also plant rollups, projection, verify-or-abate scenarios.
+- `utils/llm_analyst.py` — Groq client (env: GROQ_API_KEY, GROQ_MODEL), system
+  prompt restricts answers to supplied context, disclaimer enforced.
+- `components/tab_*.py` — one module per tab (upload, cockpit, quality,
+  decision, analyst).
+- Reference data from repo root: `cbam_reference_factors.csv`,
+  `cbam_phase_in_factors.csv`. Shipments come only via upload.
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
-
-## Stack
-
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
-
-## Where things live
-
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
-
-## Architecture decisions
-
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
-
-## Product
-
-_Describe the high-level user-facing capabilities of this app once they exist._
+## Environment
+- Run: workflow "Start application" → `streamlit run app.py --server.port 5000`.
+- `.streamlit/config.toml`: headless, 0.0.0.0:5000, CORS/XSRF off (required for
+  Replit preview iframe). Do not modify.
+- `.replit` deployment: VM target, streamlit run command. Direct edits blocked —
+  use the dot-replit tools. Do not modify.
+- Secrets: GROQ_API_KEY, GROQ_MODEL (set in dev and production). Missing key
+  must only disable Tab 5, never crash the app.
+- The pnpm artifacts (`artifacts/api-server`, `artifacts/mockup-sandbox`) are
+  unrelated scaffolding; the Streamlit app deliberately lives at the repo root.
 
 ## User preferences
-
-_Populate as you build — explicit user instructions worth remembering across sessions._
-
-## Gotchas
-
-_Populate as you build — sharp edges, "always run X before Y" rules._
-
-## Pointers
-
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Data files deduplicated: canonical CSVs live at repo root, not attached_assets.
+- Euro figures always formatted with thousands separators and no decimals.

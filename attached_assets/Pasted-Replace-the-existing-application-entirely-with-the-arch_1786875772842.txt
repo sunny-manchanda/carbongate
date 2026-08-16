@@ -1,0 +1,32 @@
+Replace the existing application entirely with the architecture below. Do not modify .streamlit/config.toml or the deployment configuration in .replit — those are working and must be preserved exactly as they are.
+
+You are a senior Python engineer building a decision-support tool for a Big 4 sustainability practice. Build a production-quality Streamlit application called CarbonGate that quantifies a company's EU Carbon Border Adjustment Mechanism (CBAM) exposure and diagnoses supplier emissions-data quality.
+
+Stack (strict): Streamlit, pandas, numpy, Plotly, groq, python-dotenv. Read GROQ_API_KEY and GROQ_MODEL from environment variables — never hardcode them.
+
+Data files are already in the project root. Read the actual column headers from the files; do not assume names. The user uploads cbam_eu_shipments_2026.csv through the app; cbam_reference_factors.csv and cbam_phase_in_factors.csv load from disk as reference tables.
+
+Implement this calculation exactly:
+
+Keep only rows where cbam_covered is "Yes". Join to the reference table on cn_code.
+Select the applicable intensity per row: if emissions_data_quality is "Verified" and a reported intensity exists, use the reported value; otherwise use eu_default_intensity_tco2e_per_t. Record which was used in a new column intensity_basis.
+chargeable_intensity = max(applicable_intensity - eu_benchmark_intensity, 0).
+gross_liability_eur = chargeable_intensity * quantity_tonnes * eua_price, where eua_price is a sidebar slider, default 78, range 40 to 150.
+Deduct carbon price already paid at origin: subtract carbon_price_paid_eur_per_t * quantity_tonnes * chargeable_intensity / applicable_intensity, floored at zero.
+year_liability = net_liability * cbam_obligation_factor for the year chosen in a sidebar selector, 2026 to 2034, default 2026.
+
+Build exactly five tabs:
+
+Tab 1 — Shipment Upload. File uploader. Validate required columns exist, quantities and prices are positive, dates parse, and cbam_covered contains only Yes/No. Show clear errors naming the offending column and row count. Display the cleaned dataframe and summary stats: total shipments, CBAM-covered share, total tonnage, total invoice value, distinct supplier plants, date range. Store in session state. Block the other tabs until a valid file is loaded.
+
+Tab 2 — Exposure Cockpit. Metric cards: total CBAM tonnage, total EU invoice value, liability for the selected year, liability at full phase-in, and liability as a percentage of EU revenue. A line chart of liability across 2026 to 2034. A treemap of liability by product category then supplier plant. A bar chart by destination country.
+
+Tab 3 — Supplier Data-Quality Heatmap. One row per supplier plant: country, product, tonnage, share of total tonnage, data-quality tier, intensity basis used, and liability. Colour the quality tier green for Verified, amber for Supplier-reported, orange for Estimated, red for Missing. Headline metric: percentage of CBAM tonnage sitting on non-verified data. Sort by liability descending.
+
+Tab 4 — Verify-or-Abate Decision Matrix. The most important tab. For every non-verified plant, compare liability under the EU default value against liability if its reported intensity were verified. Split into two groups: verification upside, where the default exceeds the reported intensity so verification reduces the bill; and hidden liability, where the reported intensity exceeds the default so verification would increase it. Flag the second group prominently with a warning that for those assets the answer is abatement or re-sourcing, not data collection. Render as a diverging horizontal bar chart centred on zero, plus a ranked action table with a recommended action column, and show the net portfolio position.
+
+Tab 5 — AI Analyst. Streamlit chat interface using Groq. Pass as context the computed plant-level table, portfolio totals, data-quality distribution, and the verify-or-abate split. Two preset buttons: "Draft a supplier data request email for the top 3 plants by liability" and "Summarise our CBAM position for the board in 150 words." The model must answer only from supplied figures, state when data is insufficient, and append that outputs are indicative and not verified regulatory advice.
+
+Structure: app.py; utils/data_processing.py, utils/cbam_math.py, utils/llm_analyst.py; components/ with one module per tab; plus .env.example and README.md.
+
+Non-negotiables: wide layout; cache reference-table loads; format euros with thousands separators and no decimals; never crash when the Groq key is missing — warn and disable only Tab 5; handle empty CSVs, CN codes missing from the reference table, and zero-tonnage rows. Add a sidebar caption stating that phase-in factors are indicative and must be verified against the current Implementing Regulation.
