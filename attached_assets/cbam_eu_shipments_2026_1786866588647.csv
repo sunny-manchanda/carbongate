@@ -1,0 +1,107 @@
+shipment_id,invoice_date,exporter_entity,supplier_plant,plant_country,product_category,cn_code,cbam_covered,quantity_tonnes,unit_price_eur,invoice_value_eur,eu_importer,destination_country,reported_emissions_intensity_tco2e_per_t,emissions_data_quality,production_route,primary_energy_source,carbon_price_paid_eur_per_t
+40001,2026-01-02,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,1849.1,703.38,1300619.96,Iberia Materiales SL,Spain,2.444,Estimated,BF-BOF,Coal,0.0
+40005,2026-01-02,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,92.8,2610.76,242278.53,Benelux Industrie NV,Netherlands,8.769,Verified,Primary-Smelter,Gas CCGT,0.0
+40099,2026-01-03,Bharat Metals & Materials Ltd,Pune Precision Components,India,Machinery,8483,No,208.8,1933.6,403735.68,Nordic Infra AB,Sweden,,Not applicable,n/a,Grid,0.0
+40013,2026-01-13,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,1822.5,402.97,734412.83,Benelux Industrie NV,Netherlands,1.741,Verified,SMR-Ammonia,Natural Gas,0.0
+40012,2026-01-14,Bharat Metals & Materials Ltd,Ganga Fertilisers Ltd,India,Fertilisers,3102,Yes,2712.9,377.62,1024445.3,Rheinmetall Bauteile GmbH,Germany,1.887,Supplier-reported,SMR-Ammonia,Natural Gas,0.0
+40015,2026-01-16,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,506.9,692.86,351210.73,Lombardia Costruzioni SpA,Italy,,Missing,BF-BOF,Coal,0.0
+40002,2026-01-17,Bharat Metals & Materials Ltd,Deccan Steelworks - Hazira EAF,India,Iron & Steel,7208,Yes,1699.1,740.09,1257486.92,Nordic Infra AB,Sweden,0.626,Verified,EAF-Scrap,Grid + Solar,4.2
+40004,2026-01-19,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,133.6,2685.57,358792.15,Gaulois Fabrication SAS,France,8.652,Verified,Primary-Smelter,Gas CCGT,0.0
+40100,2026-01-20,Bharat Metals & Materials Ltd,Sharjah Polymer Industries,UAE,Plastics,3920,No,192.2,1099.72,211366.18,Gaulois Fabrication SAS,France,,Not applicable,n/a,Grid,0.0
+40006,2026-01-21,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,70.2,2351.12,165048.62,Rheinmetall Bauteile GmbH,Germany,9.348,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40011,2026-01-21,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,4230.1,85.48,361588.95,Nordic Infra AB,Sweden,0.585,Verified,Dry-Kiln,Gas,0.0
+40009,2026-01-23,Bharat Metals & Materials Ltd,Saurashtra Cement Works,India,Cement,2523,Yes,1149.1,78.88,90641.01,Benelux Industrie NV,Netherlands,0.659,Supplier-reported,Dry-Kiln,Coal + AFR,0.0
+40003,2026-01-25,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,1654.7,762.21,1261228.89,Iberia Materiales SL,Spain,2.616,Supplier-reported,BF-BOF,Coal,0.0
+40008,2026-01-26,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,737.2,2489.35,1835148.82,Benelux Industrie NV,Netherlands,20.339,Estimated,Primary-Smelter,Captive Coal,0.0
+40010,2026-01-26,Bharat Metals & Materials Ltd,Saurashtra Cement Works,India,Cement,2523,Yes,2275.4,74.69,169949.63,Iberia Materiales SL,Spain,0.635,Supplier-reported,Dry-Kiln,Coal + AFR,0.0
+40014,2026-01-26,Bharat Metals & Materials Ltd,Konkan Fasteners Pvt Ltd,India,Iron & Steel,7318,Yes,247.3,683.97,169145.78,Rheinmetall Bauteile GmbH,Germany,,Missing,Downstream-Forming,Grid,0.0
+40007,2026-01-27,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,281.3,2476.25,696569.12,Rheinmetall Bauteile GmbH,Germany,9.501,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40024,2026-02-03,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,497.3,2675.7,1330625.61,Nordic Infra AB,Sweden,20.316,Estimated,Primary-Smelter,Captive Coal,0.0
+40023,2026-02-05,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,657.2,2675.33,1758226.88,Lombardia Costruzioni SpA,Italy,19.835,Estimated,Primary-Smelter,Captive Coal,0.0
+40025,2026-02-05,Bharat Metals & Materials Ltd,Saurashtra Cement Works,India,Cement,2523,Yes,5776.9,77.04,445052.38,Rheinmetall Bauteile GmbH,Germany,0.672,Supplier-reported,Dry-Kiln,Coal + AFR,0.0
+40016,2026-02-06,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,1372.4,672.65,923144.86,Nordic Infra AB,Sweden,2.553,Estimated,BF-BOF,Coal,0.0
+40022,2026-02-10,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,682.2,2392.06,1631863.33,Lombardia Costruzioni SpA,Italy,9.549,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40031,2026-02-11,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,1103.1,644.27,710694.24,Lombardia Costruzioni SpA,Italy,,Missing,BF-BOF,Coal,0.0
+40020,2026-02-12,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,93.1,2331.43,217056.13,Iberia Materiales SL,Spain,8.578,Verified,Primary-Smelter,Gas CCGT,0.0
+40017,2026-02-14,Bharat Metals & Materials Ltd,Deccan Steelworks - Hazira EAF,India,Iron & Steel,7208,Yes,224.8,703.93,158243.46,Gaulois Fabrication SAS,France,0.611,Verified,EAF-Scrap,Grid + Solar,4.2
+40019,2026-02-16,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,1662.7,746.65,1241454.96,Iberia Materiales SL,Spain,2.673,Supplier-reported,BF-BOF,Coal,0.0
+40030,2026-02-17,Bharat Metals & Materials Ltd,Konkan Fasteners Pvt Ltd,India,Iron & Steel,7318,Yes,1868.9,660.01,1233492.69,Gaulois Fabrication SAS,France,,Missing,Downstream-Forming,Grid,0.0
+40026,2026-02-20,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,2867.2,82.11,235425.79,Benelux Industrie NV,Netherlands,0.561,Verified,Dry-Kiln,Gas,0.0
+40102,2026-02-20,Bharat Metals & Materials Ltd,Sharjah Polymer Industries,UAE,Plastics,3920,No,181.8,1355.42,246415.36,Lombardia Costruzioni SpA,Italy,,Not applicable,n/a,Grid,0.0
+40018,2026-02-21,Bharat Metals & Materials Ltd,Deccan Steelworks - Hazira EAF,India,Iron & Steel,7208,Yes,1647.0,750.64,1236304.08,Nordic Infra AB,Sweden,0.64,Verified,EAF-Scrap,Grid + Solar,4.2
+40029,2026-02-23,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,2078.8,376.69,783063.17,Nordic Infra AB,Sweden,1.651,Verified,SMR-Ammonia,Natural Gas,0.0
+40101,2026-02-23,Bharat Metals & Materials Ltd,Pune Precision Components,India,Machinery,8483,No,243.7,2079.06,506666.92,Rheinmetall Bauteile GmbH,Germany,,Not applicable,n/a,Grid,0.0
+40021,2026-02-24,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,576.0,2589.06,1491298.56,Lombardia Costruzioni SpA,Italy,9.324,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40027,2026-02-25,Bharat Metals & Materials Ltd,Ganga Fertilisers Ltd,India,Fertilisers,3102,Yes,2771.3,398.39,1104058.21,Benelux Industrie NV,Netherlands,1.942,Supplier-reported,SMR-Ammonia,Natural Gas,0.0
+40028,2026-02-27,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,1855.6,366.8,680634.08,Lombardia Costruzioni SpA,Italy,1.773,Verified,SMR-Ammonia,Natural Gas,0.0
+40047,2026-03-02,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,1336.8,724.96,969126.53,Benelux Industrie NV,Netherlands,,Missing,BF-BOF,Coal,0.0
+40040,2026-03-03,Bharat Metals & Materials Ltd,Saurashtra Cement Works,India,Cement,2523,Yes,981.6,81.49,79990.58,Benelux Industrie NV,Netherlands,0.671,Supplier-reported,Dry-Kiln,Coal + AFR,0.0
+40034,2026-03-05,Bharat Metals & Materials Ltd,Deccan Steelworks - Hazira EAF,India,Iron & Steel,7208,Yes,2091.8,706.56,1477982.21,Iberia Materiales SL,Spain,0.612,Verified,EAF-Scrap,Grid + Solar,4.2
+40044,2026-03-05,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,1714.9,365.07,626058.54,Gaulois Fabrication SAS,France,1.779,Verified,SMR-Ammonia,Natural Gas,0.0
+40033,2026-03-06,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,1402.0,729.56,1022843.12,Rheinmetall Bauteile GmbH,Germany,2.588,Estimated,BF-BOF,Coal,0.0
+40037,2026-03-14,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,354.2,2329.94,825264.75,Nordic Infra AB,Sweden,9.267,Verified,Primary-Smelter,Gas CCGT,0.0
+40043,2026-03-14,Bharat Metals & Materials Ltd,Ganga Fertilisers Ltd,India,Fertilisers,3102,Yes,1262.5,418.84,528785.5,Iberia Materiales SL,Spain,1.918,Supplier-reported,SMR-Ammonia,Natural Gas,0.0
+40036,2026-03-16,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,558.9,639.48,357405.37,Rheinmetall Bauteile GmbH,Germany,2.797,Supplier-reported,BF-BOF,Coal,0.0
+40038,2026-03-16,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,107.8,2519.81,271635.52,Rheinmetall Bauteile GmbH,Germany,9.264,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40035,2026-03-17,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,324.5,678.17,220066.16,Benelux Industrie NV,Netherlands,2.658,Supplier-reported,BF-BOF,Coal,0.0
+40103,2026-03-17,Bharat Metals & Materials Ltd,Pune Precision Components,India,Machinery,8483,No,107.7,1296.19,139599.66,Benelux Industrie NV,Netherlands,,Not applicable,n/a,Grid,0.0
+40042,2026-03-18,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,5823.8,84.42,491645.2,Gaulois Fabrication SAS,France,0.569,Verified,Dry-Kiln,Gas,0.0
+40104,2026-03-19,Bharat Metals & Materials Ltd,Sharjah Polymer Industries,UAE,Plastics,3920,No,69.6,2196.75,152893.8,Iberia Materiales SL,Spain,,Not applicable,n/a,Grid,0.0
+40046,2026-03-20,Bharat Metals & Materials Ltd,Konkan Fasteners Pvt Ltd,India,Iron & Steel,7318,Yes,2102.0,702.51,1476676.02,Gaulois Fabrication SAS,France,,Missing,Downstream-Forming,Grid,0.0
+40041,2026-03-21,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,2930.1,77.6,227375.76,Nordic Infra AB,Sweden,0.583,Verified,Dry-Kiln,Gas,0.0
+40048,2026-03-21,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,229.6,680.81,156313.98,Gaulois Fabrication SAS,France,,Missing,BF-BOF,Coal,0.0
+40032,2026-03-22,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,2289.8,729.47,1670340.41,Iberia Materiales SL,Spain,2.443,Estimated,BF-BOF,Coal,0.0
+40039,2026-03-26,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,395.4,2400.11,949003.49,Nordic Infra AB,Sweden,18.827,Estimated,Primary-Smelter,Captive Coal,0.0
+40045,2026-03-27,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,1395.6,384.89,537152.48,Nordic Infra AB,Sweden,1.69,Verified,SMR-Ammonia,Natural Gas,0.0
+40050,2026-04-02,Bharat Metals & Materials Ltd,Deccan Steelworks - Hazira EAF,India,Iron & Steel,7208,Yes,1651.7,637.49,1052942.23,Nordic Infra AB,Sweden,0.597,Verified,EAF-Scrap,Grid + Solar,4.2
+40061,2026-04-02,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,707.0,367.87,260084.09,Lombardia Costruzioni SpA,Italy,1.704,Verified,SMR-Ammonia,Natural Gas,0.0
+40052,2026-04-04,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,1849.6,748.44,1384314.62,Nordic Infra AB,Sweden,2.639,Supplier-reported,BF-BOF,Coal,0.0
+40051,2026-04-05,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,1909.2,710.14,1355799.29,Rheinmetall Bauteile GmbH,Germany,2.769,Supplier-reported,BF-BOF,Coal,0.0
+40057,2026-04-06,Bharat Metals & Materials Ltd,Saurashtra Cement Works,India,Cement,2523,Yes,4195.4,72.84,305592.94,Lombardia Costruzioni SpA,Italy,0.652,Supplier-reported,Dry-Kiln,Coal + AFR,0.0
+40063,2026-04-09,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,633.9,737.95,467786.51,Rheinmetall Bauteile GmbH,Germany,,Missing,BF-BOF,Coal,0.0
+40062,2026-04-10,Bharat Metals & Materials Ltd,Konkan Fasteners Pvt Ltd,India,Iron & Steel,7318,Yes,1283.0,706.77,906785.91,Iberia Materiales SL,Spain,,Missing,Downstream-Forming,Grid,0.0
+40055,2026-04-12,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,392.6,2616.2,1027120.12,Iberia Materiales SL,Spain,18.845,Estimated,Primary-Smelter,Captive Coal,0.0
+40059,2026-04-12,Bharat Metals & Materials Ltd,Ganga Fertilisers Ltd,India,Fertilisers,3102,Yes,1894.7,377.28,714832.42,Lombardia Costruzioni SpA,Italy,1.911,Supplier-reported,SMR-Ammonia,Natural Gas,0.0
+40056,2026-04-14,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,494.7,2555.59,1264250.37,Nordic Infra AB,Sweden,20.153,Estimated,Primary-Smelter,Captive Coal,0.0
+40106,2026-04-15,Bharat Metals & Materials Ltd,Sharjah Polymer Industries,UAE,Plastics,3920,No,152.0,2303.07,350066.64,Iberia Materiales SL,Spain,,Not applicable,n/a,Grid,0.0
+40049,2026-04-17,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,1463.0,701.27,1025958.01,Rheinmetall Bauteile GmbH,Germany,2.455,Estimated,BF-BOF,Coal,0.0
+40054,2026-04-18,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,389.0,2358.2,917339.8,Iberia Materiales SL,Spain,9.23,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40105,2026-04-18,Bharat Metals & Materials Ltd,Pune Precision Components,India,Machinery,8483,No,169.8,1740.7,295570.86,Gaulois Fabrication SAS,France,,Not applicable,n/a,Grid,0.0
+40060,2026-04-19,Bharat Metals & Materials Ltd,Ganga Fertilisers Ltd,India,Fertilisers,3102,Yes,990.7,397.32,393624.92,Gaulois Fabrication SAS,France,1.891,Supplier-reported,SMR-Ammonia,Natural Gas,0.0
+40058,2026-04-21,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,2226.2,75.62,168345.24,Gaulois Fabrication SAS,France,0.598,Verified,Dry-Kiln,Gas,0.0
+40053,2026-04-26,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,657.3,2651.91,1743100.44,Lombardia Costruzioni SpA,Italy,9.152,Verified,Primary-Smelter,Gas CCGT,0.0
+40066,2026-05-02,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,1460.5,712.73,1040942.17,Gaulois Fabrication SAS,France,2.713,Supplier-reported,BF-BOF,Coal,0.0
+40064,2026-05-03,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,692.7,645.79,447338.73,Rheinmetall Bauteile GmbH,Germany,2.458,Estimated,BF-BOF,Coal,0.0
+40078,2026-05-05,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,1956.3,373.86,731382.32,Benelux Industrie NV,Netherlands,1.777,Verified,SMR-Ammonia,Natural Gas,0.0
+40065,2026-05-06,Bharat Metals & Materials Ltd,Deccan Steelworks - Hazira EAF,India,Iron & Steel,7208,Yes,490.7,738.26,362264.18,Gaulois Fabrication SAS,France,0.638,Verified,EAF-Scrap,Grid + Solar,4.2
+40076,2026-05-06,Bharat Metals & Materials Ltd,Ganga Fertilisers Ltd,India,Fertilisers,3102,Yes,2884.9,425.7,1228101.93,Lombardia Costruzioni SpA,Italy,1.866,Supplier-reported,SMR-Ammonia,Natural Gas,0.0
+40079,2026-05-06,Bharat Metals & Materials Ltd,Konkan Fasteners Pvt Ltd,India,Iron & Steel,7318,Yes,1391.5,707.62,984653.23,Benelux Industrie NV,Netherlands,,Missing,Downstream-Forming,Grid,0.0
+40067,2026-05-07,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,1164.9,670.05,780541.24,Gaulois Fabrication SAS,France,2.621,Supplier-reported,BF-BOF,Coal,0.0
+40072,2026-05-07,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,760.8,2512.61,1911593.69,Lombardia Costruzioni SpA,Italy,19.265,Estimated,Primary-Smelter,Captive Coal,0.0
+40080,2026-05-07,Bharat Metals & Materials Ltd,Konkan Fasteners Pvt Ltd,India,Iron & Steel,7318,Yes,947.5,645.12,611251.2,Rheinmetall Bauteile GmbH,Germany,,Missing,Downstream-Forming,Grid,0.0
+40068,2026-05-08,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,621.8,2329.42,1448433.36,Iberia Materiales SL,Spain,8.565,Verified,Primary-Smelter,Gas CCGT,0.0
+40073,2026-05-12,Bharat Metals & Materials Ltd,Saurashtra Cement Works,India,Cement,2523,Yes,3354.0,75.24,252354.96,Nordic Infra AB,Sweden,0.683,Supplier-reported,Dry-Kiln,Coal + AFR,0.0
+40070,2026-05-13,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,429.7,2540.22,1091532.53,Iberia Materiales SL,Spain,9.457,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40074,2026-05-13,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,3558.1,78.56,279524.34,Rheinmetall Bauteile GmbH,Germany,0.596,Verified,Dry-Kiln,Gas,0.0
+40077,2026-05-13,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,2026.1,420.7,852380.27,Gaulois Fabrication SAS,France,1.782,Verified,SMR-Ammonia,Natural Gas,0.0
+40075,2026-05-15,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,2763.0,85.29,235656.27,Nordic Infra AB,Sweden,0.57,Verified,Dry-Kiln,Gas,0.0
+40069,2026-05-17,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,608.3,2564.62,1560058.35,Benelux Industrie NV,Netherlands,8.699,Verified,Primary-Smelter,Gas CCGT,0.0
+40071,2026-05-17,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,718.9,2505.46,1801175.19,Nordic Infra AB,Sweden,9.868,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40081,2026-05-18,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,1203.6,677.16,815029.78,Benelux Industrie NV,Netherlands,,Missing,BF-BOF,Coal,0.0
+40089,2026-06-04,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,464.8,2699.19,1254583.51,Iberia Materiales SL,Spain,20.408,Estimated,Primary-Smelter,Captive Coal,0.0
+40084,2026-06-07,Bharat Metals & Materials Ltd,Deccan Steelworks - Hazira EAF,India,Iron & Steel,7208,Yes,691.2,689.41,476520.19,Lombardia Costruzioni SpA,Italy,0.621,Verified,EAF-Scrap,Grid + Solar,4.2
+40095,2026-06-07,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,723.0,400.19,289337.37,Lombardia Costruzioni SpA,Italy,1.723,Verified,SMR-Ammonia,Natural Gas,0.0
+40083,2026-06-10,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,1150.3,672.99,774140.4,Benelux Industrie NV,Netherlands,2.411,Estimated,BF-BOF,Coal,0.0
+40092,2026-06-12,Bharat Metals & Materials Ltd,Qatar Binaa Cement,Qatar,Cement,2523,Yes,5427.5,85.49,463996.97,Lombardia Costruzioni SpA,Italy,0.574,Verified,Dry-Kiln,Gas,0.0
+40086,2026-06-13,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,704.8,2319.28,1634628.54,Benelux Industrie NV,Netherlands,8.901,Verified,Primary-Smelter,Gas CCGT,0.0
+40088,2026-06-13,Bharat Metals & Materials Ltd,Gulf Light Metals - Ras Al Khair,Saudi Arabia,Aluminium,7601,Yes,194.7,2296.6,447148.02,Benelux Industrie NV,Netherlands,9.329,Supplier-reported,Primary-Smelter,Gas CCGT,0.0
+40091,2026-06-13,Bharat Metals & Materials Ltd,Saurashtra Cement Works,India,Cement,2523,Yes,4411.9,79.33,349996.03,Benelux Industrie NV,Netherlands,0.659,Supplier-reported,Dry-Kiln,Coal + AFR,0.0
+40093,2026-06-13,Bharat Metals & Materials Ltd,Ganga Fertilisers Ltd,India,Fertilisers,3102,Yes,2004.9,389.95,781810.76,Gaulois Fabrication SAS,France,1.901,Supplier-reported,SMR-Ammonia,Natural Gas,0.0
+40094,2026-06-14,Bharat Metals & Materials Ltd,Arabian Nitrogen Co,Saudi Arabia,Fertilisers,3102,Yes,1737.8,422.71,734585.44,Rheinmetall Bauteile GmbH,Germany,1.704,Verified,SMR-Ammonia,Natural Gas,0.0
+40085,2026-06-15,Bharat Metals & Materials Ltd,Kalinga Alloys Ltd,India,Iron & Steel,7326,Yes,1230.0,646.17,794789.1,Iberia Materiales SL,Spain,2.619,Supplier-reported,BF-BOF,Coal,0.0
+40096,2026-06-15,Bharat Metals & Materials Ltd,Konkan Fasteners Pvt Ltd,India,Iron & Steel,7318,Yes,1892.3,735.76,1392278.65,Iberia Materiales SL,Spain,,Missing,Downstream-Forming,Grid,0.0
+40087,2026-06-17,Bharat Metals & Materials Ltd,Emirates Global Metals - Jebel Ali,UAE,Aluminium,7601,Yes,385.1,2426.68,934514.47,Iberia Materiales SL,Spain,9.273,Verified,Primary-Smelter,Gas CCGT,0.0
+40090,2026-06-22,Bharat Metals & Materials Ltd,Vindhya Aluminium,India,Aluminium,7604,Yes,531.8,2255.91,1199692.94,Rheinmetall Bauteile GmbH,Germany,20.488,Estimated,Primary-Smelter,Captive Coal,0.0
+40082,2026-06-24,Bharat Metals & Materials Ltd,Deccan Steelworks - Raigad,India,Iron & Steel,7208,Yes,1564.3,709.49,1109855.21,Lombardia Costruzioni SpA,Italy,2.56,Estimated,BF-BOF,Coal,0.0
+40097,2026-06-26,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,1929.4,756.99,1460536.51,Benelux Industrie NV,Netherlands,,Missing,BF-BOF,Coal,0.0
+40098,2026-06-26,Bharat Metals & Materials Ltd,Nile Delta Steel Trading,Egypt,Iron & Steel,7208,Yes,925.3,764.94,707798.98,Benelux Industrie NV,Netherlands,,Missing,BF-BOF,Coal,0.0
