@@ -3,10 +3,6 @@ modules = ["nodejs-24", "python-3.11"]
 [deployment]
 router = "application"
 deploymentTarget = "vm"
-run = ["streamlit", "run", "app.py", "--server.port", "5000", "--server.address", "0.0.0.0"]
-
-[deployment.env]
-PORT = "5000"
 
 [deployment.postBuild]
 args = ["pnpm", "store", "prune"]
