@@ -7,12 +7,16 @@ description: How publishing works for this repo's root Streamlit app inside a pn
 
 **Rule:** Production runs ONLY artifact `[services.production]` processes. The root Streamlit app is the "CarbonGate" service inside the api-server artifact (`paths = ["/"]`, localPort 5000, explicit `.pythonlibs/bin/streamlit` run command, startup health `/_stcore/health`). `.replit` `[deployment]` must contain NO `run` command — only router/target/postBuild.
 
-**Why:** On the vm target a legacy `.replit` run command executes ALONGSIDE artifact services. With both a legacy `run = ["streamlit", ...]` and the CarbonGate service binding port 5000, the loser exits and the VM hangs at "Waiting for deployment to be ready" — a silent promote timeout with zero runtime logs. An earlier belief that the legacy run is "completely ignored" was unsafe; treat it as a live collision hazard. A separate earlier failure with the same silent signature was a cold image pull (build log said nix layers uncached) — that one just warrants a retry.
+**Why:** Platform docs say `.replit` `deployment.run` is ignored in artifact mode, but a leftover legacy `run = ["streamlit", ...]` plus a service on the same port is at best ambiguous — keep it out. REVISED after evidence: the silent promote stalls on this project were most likely NOT config-caused; a known-good immutable image later failed to re-initialize the same way, which exonerates the workspace (see recipe below).
 
-**How to apply:**
-- Debugging a silent promote timeout here: first check the build log for uncached nix layers (cold pull → retry once); if the cache was warm, hunt for port/process conflicts between `.replit` [deployment] and artifact services.
+**How to apply — silent "Waiting for deployment to be ready" stall recipe:**
+1. Build log mentions "Nix layers … uncached" → cold image pull; just retry once.
+2. Warm cache → check for port/process conflicts across config layers, and that each service's health path returns 200 locally.
+3. Decisive test: after a failed promote the platform auto-rolls back by re-provisioning the PREVIOUS good build's VM (its status shows "resuming", its build log gains new "Creating virtual machine…" lines). If that re-init ALSO fails ("failed to initialize due to a configuration or code error"), the workspace is exonerated — that image is immutable and predates all changes. Escalate to Replit support with deployment + build IDs and timestamps; when rollback fails the old build flips to `failed` and the live domain 404s on every path.
+
+**Other traps:**
+- `fetchDeploymentLogs` takes NUMERIC epoch-ms timestamps (`afterTimestamp: Date.parse("…Z")`); a string throws a validation error. Even called correctly it returned "No deployment logs found" for these init failures — zero runtime lines means the VM died before the app started (an app-level crash leaves a trace). Probe the live domain for current state: `/_stcore/health` (Streamlit), `/api/healthz` (api-server).
 - Never remove the "Start application" workflow: without it the platform flips the project to "not deployable" (kind=api artifacts count as reusable libraries, kind=design as mockups). Re-adding it restores publishability instantly.
-- Artifact schema requires `development.run` on every service; CarbonGate's dev run is an `echo` no-op because "Start application" owns dev port 5000. Don't give the managed service a real dev command.
+- Artifact schema requires `development.run` on every service; CarbonGate's dev run is an `echo` no-op because "Start application" owns dev port 5000.
 - `artifact.toml` edits only via temp-file + `verifyAndReplaceArtifactToml`; validation errors are unspecific — diff against a service that already validates.
-- `fetchDeploymentLogs` returns nothing for this project even while prod demonstrably serves; absence of logs proves nothing. Probe the live domain instead: `/_stcore/health` (Streamlit) and `/api/healthz` (api-server).
 - Before suggesting publish, dry-run each service's exact production command locally on a spare port and require 200 on its configured health path.
